@@ -5,3 +5,10 @@ body {
 .main-color {
     background-color: rgb(114, 2, 114) !important;
 }
+
+.banner {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../image/banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
