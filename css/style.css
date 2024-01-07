@@ -13,6 +13,13 @@ body {
   background-position: center;
 }
 
+.banner-product {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url("../image/banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 .hovered-card {
   transition: 0.3s;
 }
