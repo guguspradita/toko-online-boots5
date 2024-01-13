@@ -55,13 +55,17 @@
             <!-- Category promo -->
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
-                    <button class="btn btn-outline-warning w-100 fs-5 active">Semua Promo</button>
+                    <button id="semuaPromoBtn" onclick="showAll()"
+                        class="btn btn-outline-warning w-100 fs-5 active">Semua
+                        Promo</button>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
-                    <button class="btn btn-outline-warning w-100 fs-5">Promo Diskon</button>
+                    <button id="diskonPromoBtn" onclick="showDiskon()" class="btn btn-outline-warning w-100 fs-5">Promo
+                        Diskon</button>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-4 mb-3">
-                    <button class="btn btn-outline-warning w-100 fs-5">Promo Bonus</button>
+                    <button id="bonusPromoBtn" onclick="showBonus()" class="btn btn-outline-warning w-100 fs-5">Promo
+                        Bonus</button>
                 </div>
             </div>
             <!-- Isi promo -->
@@ -163,7 +167,6 @@
                     </div>
                 </div>
             </div>
-            <!-- End semua promo -->
 
             <!-- Promo diskon -->
             <div id="promoDiskon">
@@ -214,12 +217,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- End promo diskon -->
 
-        <!-- Promo bonus -->
-        <div id="promoBonus">
-            <div class="container">
+            <!-- Promo bonus -->
+            <div id="promoBonus">
                 <div class="row justify-content-center">
                     <div class="col-sm-6 col-lg-3 hovered-card mb-4">
                         <div class="card">
@@ -230,7 +230,8 @@
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">Beli 1 Gratis 1</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk
                                     of the card's content.
                                 </p>
@@ -246,7 +247,8 @@
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">Gratis Cappucinno</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk
                                     of the card's content.
                                 </p>
@@ -262,7 +264,8 @@
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title">Gratis Brownies</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the
                                     bulk
                                     of the card's content.
                                 </p>
@@ -272,13 +275,12 @@
                 </div>
             </div>
         </div>
-        <!-- End promo bonus -->
     </div>
-    </div>
+
     <!-- End promo -->
 
     <!-- Footer -->
-    <!-- <footer id="footer" class="footer">
+    <footer id="footer" class="footer">
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-info">
@@ -328,12 +330,54 @@
                 &copy; 2024 <strong><span>Youthful Bites & Sips</span></strong>. All Rights Reserved
             </div>
         </div>
-
-    </footer> -->
+    </footer>
     <!-- End Footer -->
 
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/lightbox-plus-jquery.min.js"></script>
+
+    <script>
+        let btnSemuaPromo = $("#semuaPromoBtn");
+        let btnDiskonPromo = $("#diskonPromoBtn");
+        let btnBonusPromo = $("#bonusPromoBtn");
+
+        let semuaPromoView = $("#semuaPromo");
+        let diskonPromoView = $("#promoDiskon");
+        let bonusPromoView = $("#promoBonus");
+
+        diskonPromoView.hide();
+        bonusPromoView.hide();
+
+        function showAll() {
+            btnDiskonPromo.removeClass('active');
+            btnBonusPromo.removeClass('active');
+            btnSemuaPromo.addClass('active');
+
+            diskonPromoView.hide(1000);
+            bonusPromoView.hide(1000);
+            semuaPromoView.show(1000);
+        }
+
+        function showDiskon() {
+            btnSemuaPromo.removeClass('active');
+            btnBonusPromo.removeClass('active');
+            btnDiskonPromo.addClass('active');
+
+            semuaPromoView.hide(1000);
+            bonusPromoView.hide(1000);
+            diskonPromoView.show(1000);
+        }
+
+        function showBonus() {
+            btnSemuaPromo.removeClass('active');
+            btnDiskonPromo.removeClass('active');
+            btnBonusPromo.addClass('active');
+
+            semuaPromoView.hide(1000);
+            diskonPromoView.hide(1000);
+            bonusPromoView.show(1000);
+        }
+    </script>
 </body>
 
 </html>
