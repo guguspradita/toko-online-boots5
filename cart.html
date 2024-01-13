@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nama Product | Youthful Bites & Sips</title>
+    <title>Toko Online Youthful Bites & Sips | Cart</title>
     <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/css/lightbox.min.css">
 </head>
 
 <body>
@@ -31,7 +32,7 @@
                         <a class="nav-link" href="promo.html">Promo</a>
                     </li>
                     <li class="nav-item me-5">
-                        <a class="nav-link" href="cart.html" aria-disabled="true"><i class="bi bi-cart3"></i> Shopping
+                        <a class="nav-link active" href="#" aria-disabled="true"><i class="bi bi-cart3"></i> Shopping
                             Cart</a>
                     </li>
                 </ul>
@@ -40,74 +41,75 @@
     </nav>
     <!-- End of Navbar -->
 
-    <!-- Breadcrumb -->
-    <div class="container-fluid pt-5">
-        <div class="container pt-5">
-            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="product.html" style="text-decoration: none;">Product</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Western</li>
-                    <li class="breadcrumb-item active" aria-current="page">French Fries</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- End Breadcrumb -->
-
-    <!-- Content Product -->
-    <div class="container-fluid mb-5">
+    <!-- Table -->
+    <div class="container-fluid py-5">
         <div class="container">
-            <div class="row">
-                <!-- Image -->
-                <div class="col-md-5 col-lg-4 mb-4">
-                    <img src="image/product/french-fries.jpg" class="img-fluid" alt="">
-                </div>
-                <!-- Description -->
-                <div class="col-md-6 offset-md-1 col-lg-7 offset-lg-1">
-                    <h1 style="font-weight: 700;">French Fries</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur totam voluptates blanditiis
-                        quia quisquam nulla eos ipsa, cum facilis obcaecati.</p>
-                    <h4 class="text-warning">Rp 20.000</h4>
+            <h2 class="text-center my-5">Keranjang Belanja</h2>
 
-                    <div class="mt-3">
-                        <button class="btn btn-outline-warning">Lihat Lainnya</button>
-                    </div>
-                </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Pesanan</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Jumlah</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="vertical-align: middle;">
+                            <td>
+                                <a href="image/product/french-fries.jpg" data-lightbox="french-fries.jpg"
+                                    data-title="French Fries">
+                                    <img src="image/product/thumb/french-fries.jpg"
+                                        class="img-thumbnail d-none d-sm-block" width="150px" alt="French Fries">
+                                    <label class="d-block d-sm-none">French Fries</label>
+                                </a>
+                            </td>
+                            <td>French Fries</td>
+                            <td>Rp 20.000</td>
+                            <td>1</td>
+                            <td>Rp 20.000</td>
+                        </tr>
+                        <tr style="vertical-align: middle;">
+                            <td>
+                                <a href="image/product/steak.jpg" data-lightbox="steak.jpg" data-title="Steak">
+                                    <img src="image/product/thumb/steak.jpg" class="img-thumbnail d-none d-sm-block"
+                                        width="150px" alt="Steak">
+                                    <label class="d-block d-sm-none">Steak</label>
+                                </a>
+                            </td>
+                            <td>Steak</td>
+                            <td>Rp 85.000</td>
+                            <td>2</td>
+                            <td>Rp 170.000</td>
+                        </tr>
+                        <tr style="vertical-align: middle;">
+                            <td>
+                                <a href="image/product/strawberry-drink.jpg" data-lightbox="strawberry-drink.jpg"
+                                    data-title="Strawberry Drink">
+                                    <img src="image/product/thumb/strawberry-drink.jpg"
+                                        class="img-thumbnail d-none d-sm-block" width="150px" alt="Strawberry Drink">
+                                    <label class="d-block d-sm-none">Strawberry Drink</label>
+                                </a>
+                            </td>
+                            <td>Strawberry Drink</td>
+                            <td>Rp 25.000</td>
+                            <td>2</td>
+                            <td>Rp 50.000</td>
+                        </tr>
+                        <tr>
+                            <th colspan="4">Total</th>
+                            <th>Rp 200.000</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-warning text-light">Checkout</button>
             </div>
         </div>
     </div>
-    <!-- End Content Product -->
-
-    <!-- Recommendation -->
-    <div class="container-fluid" style="background-color: #fff9f9">
-        <div class="container">
-            <h2 class="text-center py-3">Recommendation Product</h2>
-
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2 offset-lg-2 mb-3">
-                    <a href="detail.html">
-                        <img src="image/product/thumb/fried-rice.jpg" class="img-fluid img-thumbnail" alt="">
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <a href="detail.html">
-                        <img src="image/product/thumb/grilled-meat.jpg" class="img-fluid img-thumbnail" alt="">
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-3">
-                    <a href="detail.html">
-                        <img src="image/product/thumb/strawberry-drink.jpg" class="img-fluid img-thumbnail" alt="">
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-2 mb-5">
-                    <a href="detail.html">
-                        <img src="image/product/thumb/raspberry-cake.jpg" class="img-fluid img-thumbnail" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Recommendation -->
+    <!-- End Table -->
 
     <!-- Footer -->
     <footer id="footer" class="footer">
@@ -160,10 +162,11 @@
                 &copy; 2024 <strong><span>Youthful Bites & Sips</span></strong>. All Rights Reserved
             </div>
         </div>
-
     </footer>
     <!-- End Footer -->
+
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/lightbox-plus-jquery.min.js"></script>
 </body>
 
 </html>
